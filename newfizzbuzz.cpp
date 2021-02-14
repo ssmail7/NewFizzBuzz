@@ -1,4 +1,4 @@
-//**************************************************************
+//*************************************************************
 // Written by Steven Smail for COP3331
 //
 // newfizzbuzz.cpp (Project 1)
@@ -10,16 +10,19 @@
 // -For multiples of 7, it prints “Woof”.
 // -For multiples of 3 and 7, it prints “FizzWoof”.
 // -For multiples of 5 and 7, it prints “BuzzWoof”.
-//**************************************************************
+//*************************************************************
 
 #include <iostream>
-#include <iomanip> //For setwusing namespace std;
+#include <iomanip> //For setw
+using namespace std;
 
 int main()
-{  int i;
+{
+  int i;
 
   //Loop to count to 100
-  for(i = 1; i <= 100; i++)  {
+  for(i = 1; i <= 100; i++)
+  {
     if(((i % 3) == 0 && (i % 5) == 0))
       cout << setw(10) << "FizzBuzz" << endl;
     else if(((i % 3) == 0 && (i % 7) == 0))
@@ -33,5 +36,6 @@ int main()
     else if((i % 7) == 0)
       cout << setw(10) << "Woof";
     else
-      cout << setw(10) << i;  }
+      cout << setw(10) << i;
+  }
 }
